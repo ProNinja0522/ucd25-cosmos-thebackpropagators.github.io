@@ -69,13 +69,21 @@ jobs:
           echo "Checking if PaperMod theme exists..."
           ls -la themes/
           ls -la themes/PaperMod/
+          echo "Checking Hugo configuration..."
+          hugo config
+          echo "Checking for any go.mod files..."
+          find . -name "go.mod" -type f
+          echo "Checking environment variables..."
+          env | grep -i hugo
       - name: Build with Hugo
         run: |
           hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
-            --cacheDir "${{ runner.temp }}/hugo_cache"
+            --cacheDir "${{ runner.temp }}/hugo_cache" \
+            --ignoreVendorPaths "**" \
+            --theme PaperMod
       - name: Cache Save
         id: cache-save
         uses: actions/cache/save@v4
