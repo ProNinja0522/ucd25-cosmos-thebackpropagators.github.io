@@ -1,7 +1,7 @@
 /* Manual color scheme */
 
 :root {
-  /* Neutral = dark-blue ramp */
+  /* Neutral */
   --color-neutral:       255, 255, 255;
   --color-neutral-50:    235, 243, 255;
   --color-neutral-100:   205, 223, 255;
@@ -15,7 +15,7 @@
   --color-neutral-900:    10,  30,  60;
 
 
-  /* Primary = blue ramp */
+  /* Blue */
   --color-primary-50:    239, 246, 255;
   --color-primary-100:   219, 234, 254;
   --color-primary-200:   191, 219, 254;
@@ -27,7 +27,7 @@
   --color-primary-800:    30,  64, 175;
   --color-primary-900:    30,  58, 138;
 
-  /* Secondary = cyan ramp */
+  /* Cyan */
   --color-secondary-50:  236, 254, 255;
   --color-secondary-100: 207, 250, 254;
   --color-secondary-200: 165, 243, 252;
